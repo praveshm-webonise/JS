@@ -31,9 +31,14 @@
 
         function show() {
           var retrievedObject = localStorage.getItem('userData');
+          //document.write(retrievedObject);
           console.log('All Data: ', JSON.parse(retrievedObject));
-          var jsn=JSON.parse(retrievedObject);
-          alert(jsn[username]);
+          var jsn = new Array();
+          jsn=JSON.parse(retrievedObject);
+          for (var i = 0;i<jsn.length;i++) {
+            document.write(jsn[i].username+"  "+jsn[i].email+" "+jsn[i].timestamp);
+          }
+          //alert(jsn[0].username);
       }
 
     </script>
