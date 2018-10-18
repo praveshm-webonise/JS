@@ -1,0 +1,51 @@
+<html>
+  <head>
+    <script type="text/javascript">
+      var username;
+      var email;
+      var userData=new Array();
+        function storeform() {
+          username=document.getElementById("username").value;
+          email=document.getElementById("email").value;
+          if(!isname(username)) {
+            throw("Invalid Name");
+          }
+          if(!isemail(email)) {
+            throw("Invalid Email");
+          }
+          var dat=new Date();
+          var user = { 'username': username, 'email': email, 'timestamp': dat };
+          userData.push(user);
+          localStorage.setItem('userData', JSON.stringify(userData));
+      }
+
+        function isname(name) {
+          var pattern = /^[0-9a-zA-Z ]*$/;
+          return pattern.test(name);
+      }
+
+        function isemail(email) {
+          var pattern =/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+          return pattern.test(email);
+      }
+
+        function show() {
+          var retrievedObject = localStorage.getItem('userData');
+          console.log('All Data: ', JSON.parse(retrievedObject));
+          var jsn=JSON.parse(retrievedObject);
+          alert(jsn[username]);
+      }
+
+    </script>
+  </head>
+    <body>
+      <form>
+        Enter your name:
+        <input type="text" id="username"/><br>
+        Enter your email:
+        <input type="text" id="email"/><br>
+        <button type="button" onclick="storeform()">Add Record</button>
+        <button type="button" onclick="show()">Show All Details</button>
+      </form>
+    </body>
+</html>
