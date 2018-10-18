@@ -1,45 +1,45 @@
 <html>
-	<head>
-		<script type="text/javascript">
-			var timer1,timer2,timer3,timer4,timer5;
-			function opentab(){
-				var link1 = window.open("https://www.google.com/");
-				var link2 = window.open("https://www.flipkart.com/");
-				var link3 = window.open("https://www.w3schools.com/");
-				var link4 = window.open("https://www.amazon.com/");
-				var link5 = window.open("https://www.tutorialspoint.com/");
-				timer1 = setTimeout(
-					function(){
-						link1.window.close();
-					}, 10000);		
-				timer2 = setTimeout(
-					function(){
-						link2.window.close();
-					}, 10000); 
-				timer3 = setTimeout(
-					function(){
-						link3.window.close();
-					}, 10000);
-				timer4 = setTimeout(
-					function(){
-						link4.window.close();
-					}, 10000);
-				timer5 = setTimeout(
-					function(){
-						link5.window.close();
-					}, 10000);	
-			}
-			function closetab(){
-				clearTimeout(timer1);
-				clearTimeout(timer2);
-				clearTimeout(timer3);
-				clearTimeout(timer4);
-				clearTimeout(timer5);
-			}
-		</script>
-	</head>
-		<body>
-			<button onclick="opentab()">Open tab</button> 
-			<button onclick="closetab()">Pause</button> 
-		</body>
+  <head>
+    <script type="text/javascript">
+      var timer1,timer2,timer3,timer4,timer5;
+      function opentab(){
+        var link1 = window.open("https://www.google.com/");
+        var link2 = window.open("https://www.flipkart.com/");
+        var link3 = window.open("https://www.w3schools.com/");
+        var link4 = window.open("https://www.amazon.com/");
+        var link5 = window.open("https://www.tutorialspoint.com/");
+        timer1 = setTimeout(
+          function(){
+            link1.window.close();
+          }, 10000);
+        timer2 = setTimeout(
+          function(){
+            link2.window.close();
+          }, 10000);
+        timer3 = setTimeout(
+          function(){
+            link3.window.close();
+          }, 10000);
+        timer4 = setTimeout(
+          function(){
+            link4.window.close();
+          }, 10000);
+        timer5 = setTimeout(
+          function(){
+            link5.window.close();
+          }, 10000);
+      }
+      function closetab(){
+        clearTimeout(timer1);
+        clearTimeout(timer2);
+        clearTimeout(timer3);
+        clearTimeout(timer4);
+        clearTimeout(timer5);
+      }
+    </script>
+  </head>
+    <body>
+      <button onclick="opentab()">Open tab</button>
+      <button onclick="closetab()">Pause</button>
+    </body>
 </html>

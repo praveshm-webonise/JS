@@ -1,30 +1,30 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<script type="text/javascript">
-			function occurrence() {
-				var str = document.getElementById("t1").value;
-				var temp = str.split(',');
-				var count=0;
+  <head>
+    <script type="text/javascript">
+      function occurrence() {
+        var str = document.getElementById("t1").value;
+        var temp = str.split(',');
+        var count=0;
 
-				for(let i=0;i<temp.length;i++) {
-					for(let j=0;j<temp.length;j++) {
-						if(i==temp[j])
-						count++;
-					}
-					if(count>0) {
-						document.writeln(i + " : " + count);
-						count;
-					}
-				}
-			}
-		</script>
-	</head>
-	<body>
-		Enter the values:
-		<input type="text" id="text1"/><br>
-		<input type="submit" value="Submit" onclick="occurrence()"/>
-	</body>
+        for(let i=0;i<temp.length;i++) {
+          for(let j=0;j<temp.length;j++) {
+            if(i==temp[j])
+            count++;
+          }
+          if(count>0) {
+            document.writeln(i + " : " + count);
+            count;
+          }
+        }
+      }
+    </script>
+  </head>
+  <body>
+    Enter the values:
+    <input type="text" id="text1"/><br>
+    <input type="submit" value="Submit" onclick="occurrence()"/>
+  </body>
 </html>
 
 
